@@ -1,4 +1,6 @@
-/** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: true,
-}
+    reactStrictMode: true,
+    eslint: {
+        dirs: ['pages'], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
+    },
+};
