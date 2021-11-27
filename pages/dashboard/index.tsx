@@ -3,8 +3,8 @@ import Sidebar from "../../components/sidebar/sidebar";
 
 const Dashboard:FunctionComponent = () => {
     return (
-        <div className="bg-green-300 border-green-600">
-            <Sidebar />
+        <div className="bg-primary flex-1 justify-between">
+          
         </div>
     );
 
