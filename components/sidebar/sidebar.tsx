@@ -13,46 +13,45 @@ const Sidebar:FunctionComponent = () => {
         <div className=" px-5">
             <div className="py-10">
             </div>
-            <div className="flex  flex-col items-center py-5 py-6 hover:red">
-                <Image alt="tick" src={DashboardIcon} className="w-full h-9 hover:red" />
-                <a href="/" className="text-primary pt-4 text-10 hover:red">
-                 Dashboard
-                </a>
+            <div className="flex  flex-col items-center py-5 py-6">
+                <Image alt="tick" src={DashboardIcon} className="w-full h-9" />
+                <p className="text-primary pt-4 text-10 hover:text-gradient-blue-y">
+                    <a href="/"> Dashboard</a>
+                </p>
 
             </div>
-            <div className="flex flex-col items-center  py-5 py-6">
+            <div className="flex flex-col items-center  py-5 py-6 ">
                 <Image alt="tick" src={WalletIcon} className="w-full h-9" />
-                <a href="/" className="text-primary pt-4 text-10 ">
-                 Wallet
-                </a>
+                <p className="text-primary pt-4 text-10 hover:text-gradient-blue-y">
+                    <a href="/"> Wallet</a>
+                </p>
 
             </div>
             <div className="flex flex-col items-center  py-5 py-6 ">
                 <Image alt="tick" src={SwapIcon} className="w-full h-9" />
-                <a href="/" className="text-primary pt-4 text-10">
-                 Swap
-                </a>
+                <p className="text-primary pt-4 text-10 hover:text-gradient-blue-y">
+                    <a href="/"> Swap</a>
+                </p>
 
             </div>
             <div className="flex flex-col items-center py-5 py-6 ">
                 <Image alt="tick" src={ProposalsIcon} className="w-full h-9" />
-                <a href="/" className="text-primary pt-4 text-10">
-                 Proposals
-                </a>
-
+                <p className="text-primary pt-4 text-10 hover:text-gradient-blue-y">
+                    <a href="/"> Proposals</a>
+                </p>
             </div>
             <div className="flex flex-col items-center py-5 py-6 ">
                 <Image alt="tick" src={StakingIcon} className="w-full h-9" />
-                <a href="/" className="text-primary pt-4 text-10">
-                 Staking
-                </a>
+                <p className="text-primary pt-4 text-10 hover:text-gradient-blue-y">
+                    <a href="/"> Staking</a>
+                </p>
 
             </div>
-            <div className="flex flex-col items-center py-5 py-6 ">
+            <div className="flex flex-col items-center py-5 py-6">
                 <Image alt="tick" src={HistoryIcon} className="w-full h-9" />
-                <a href="/" className="text-primary pt-4 text-10">
-                 History
-                </a>
+                <p className="text-primary pt-4 text-10 hover:text-gradient-blue-y">
+                    <a href="/"> History</a>
+                </p>
             </div>
         </div>
     );

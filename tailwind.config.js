@@ -5,12 +5,16 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {},
+        fontFamily: {
+            'sora': 'Sora'
+        },
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
             red: colors.rose,
             "primary": "#8d97a2",
             "secondary": "#6b7886",
+            "heading-primary":"#595961",
             "app-primary": "#f8f8fa",
             "primary-hover" :"#7e8798",
             "btn-primary":"#555569",
