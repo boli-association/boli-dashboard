@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from "react";
-import Sidebar from "../components/sidebar/sidebar";
+import Sidebar from "../components/sidebar/Sidebar";
 import Dashboard from "./dashboard";
 
 const Home:FunctionComponent = () => {
 
     return (
-        <div className="flex min-h-screen"> 
+        <div className="w-screen flex overflow-hidden"> 
             <Sidebar />
             <Dashboard />
         </div>
