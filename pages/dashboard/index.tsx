@@ -21,7 +21,7 @@ const Dashboard:FunctionComponent = () => {
             </div>
 
             {/** Token Details */}
-            <div className="flex mt-20 justify-start">
+            <div className="flex mt-20 justify-start flex-wrap">
                 {cardHeading.map((item,index) => {
                     return (
                         <TextCards key={index} heading={item.heading} value={item.value}/>
@@ -32,7 +32,7 @@ const Dashboard:FunctionComponent = () => {
             
             {/** Trending Communities */}
             <div className="font-16 ml-20 mt-20">Trending Communities</div>
-            <div className="flex mt-20 justify-start">
+            <div className="flex mt-20 justify-start flex-wrap">
                 {imageCardMdHeading.map((item,index) => {
                     return (
                         <ImageCardsMd key={index} value={item} />
@@ -53,7 +53,7 @@ const Dashboard:FunctionComponent = () => {
 
             {/** Top Communities  */}
             <div className="font-16 ml-20 mt-20 ">Top Communities</div>
-            <div className="flex flex-wrap  justify-start w-92 py-20
+            <div className="flex flex-wrap justify-start w-92 py-10
             ">
                 {topicCardHeading.map((item,index) => {
                     return (

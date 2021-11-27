@@ -1,7 +1,12 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { FunctionComponent } from "react";
 import Image from "next/image";
-import TickBox from "../../public/assets/images/checkbox-circle-fill.svg";
+import DashboardIcon from "../../public/assets/images/dashboard.svg";
+import HistoryIcon from "../../public/assets/images/history.svg";
+import WalletIcon from "../../public/assets/images/wallet.svg";
+import ProposalsIcon from "../../public/assets/images/proposals.svg";
+import StakingIcon from "../../public/assets/images/staking.svg";
+import SwapIcon from "../../public/assets/images/swap.svg";
 
 const Sidebar:FunctionComponent = () => {
     return (
@@ -9,42 +14,42 @@ const Sidebar:FunctionComponent = () => {
             <div className="py-10">
             </div>
             <div className="flex  flex-col items-center py-5 py-6 hover:red">
-                <Image alt="tick" src={TickBox} className="w-full h-9 hover:red" />
+                <Image alt="tick" src={DashboardIcon} className="w-full h-9 hover:red" />
                 <a href="/" className="text-primary pt-4 text-10 hover:red ">
                  Dashboard
                 </a>
 
             </div>
             <div className="flex flex-col items-center  py-5 py-6">
-                <Image alt="tick" src={TickBox} className="w-full h-9" />
+                <Image alt="tick" src={WalletIcon} className="w-full h-9" />
                 <a href="/" className="text-primary pt-4 text-10 ">
                  Wallet
                 </a>
 
             </div>
             <div className="flex flex-col items-center  py-5 py-6 ">
-                <Image alt="tick" src={TickBox} className="w-full h-9" />
+                <Image alt="tick" src={SwapIcon} className="w-full h-9" />
                 <a href="/" className="text-primary pt-4 text-10">
                  Swap
                 </a>
 
             </div>
             <div className="flex flex-col items-center py-5 py-6 ">
-                <Image alt="tick" src={TickBox} className="w-full h-9" />
+                <Image alt="tick" src={ProposalsIcon} className="w-full h-9" />
                 <a href="/" className="text-primary pt-4 text-10">
                  Proposals
                 </a>
 
             </div>
             <div className="flex flex-col items-center py-5 py-6 ">
-                <Image alt="tick" src={TickBox} className="w-full h-9" />
+                <Image alt="tick" src={StakingIcon} className="w-full h-9" />
                 <a href="/" className="text-primary pt-4 text-10">
                  Staking
                 </a>
 
             </div>
             <div className="flex flex-col items-center py-5 py-6 ">
-                <Image alt="tick" src={TickBox} className="w-full h-9" />
+                <Image alt="tick" src={HistoryIcon} className="w-full h-9" />
                 <a href="/" className="text-primary pt-4 text-10">
                  History
                 </a>
