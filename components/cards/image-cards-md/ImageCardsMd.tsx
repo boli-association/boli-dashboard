@@ -11,8 +11,8 @@ const ImageCardsMd:FunctionComponent<ImageCardsMd> = ({value}) => {
     return (
         <div className="h-44 w-32 ml-20 my-5 bg-gray-100 rounded-xl flex flex-col justify-between shadow duration-300 hover:bg-white hover:shadow-xl">
             <Image src={NikeImage} alt="nike" /> {/** Temporary basis, don't worry about it */}
-            <div className="pb-5 text-sm w-20 font-semibold text-center">
-                <p className=""> {value} &nbsp;&nbsp;&nbsp;</p> {/** Bad way to fix alignment. Quick fix */}
+            <div className="pb-5 text-sm flex flex-start font-semibold ">
+                <p className="ml-4"> {value}</p>
             </div>
         </div>
     );
