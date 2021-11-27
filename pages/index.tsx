@@ -5,13 +5,11 @@ import Dashboard from "./dashboard";
 const Home:FunctionComponent = () => {
 
     return (
-        <div className="w-screen flex overflow-hidden"> 
+        <div className="w-screen flex"> 
             <Sidebar />
             <Dashboard />
         </div>
-
     );
-
 };
   
 
