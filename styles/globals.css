@@ -1,3 +1,11 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer sora {
+    @font-face {
+      font-family: Sora;
+      font-weight: 400;
+      src: url(/fonts/Sora/Sora-Regular.ttf) format("woff");
+    }
+  }
