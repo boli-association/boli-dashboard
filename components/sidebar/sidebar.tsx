@@ -7,10 +7,9 @@ const Sidebar:FunctionComponent = () => {
     return (
         <div className=" px-5">
             <div className="py-10">
-
             </div>
             <div className="flex  flex-col items-center py-5 py-6 hover:red">
-                <Image alt="tick" src={TickBox} className="w-full h-9 hover:red " />
+                <Image alt="tick" src={TickBox} className="w-full h-9 hover:red" />
                 <a href="/" className="text-primary pt-4 text-10 hover:red ">
                  Dashboard
                 </a>
