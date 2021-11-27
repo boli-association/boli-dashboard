@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { FunctionComponent } from "react";
 import Image from "next/image";
-import DashboardIcon from "../../public/assets/images/dashboard.svg";
-import HistoryIcon from "../../public/assets/images/history.svg";
-import WalletIcon from "../../public/assets/images/wallet.svg";
-import ProposalsIcon from "../../public/assets/images/proposals.svg";
-import StakingIcon from "../../public/assets/images/staking.svg";
-import SwapIcon from "../../public/assets/images/swap.svg";
+import DashboardIcon from "../../public/assets/icons/dashboard.svg";
+import HistoryIcon from "../../public/assets/icons/history.svg";
+import WalletIcon from "../../public/assets/icons/wallet.svg";
+import ProposalsIcon from "../../public/assets/icons/proposals.svg";
+import StakingIcon from "../../public/assets/icons/staking.svg";
+import SwapIcon from "../../public/assets/icons/swap.svg";
 
 const Sidebar:FunctionComponent = () => {
     return (
@@ -15,7 +15,7 @@ const Sidebar:FunctionComponent = () => {
             </div>
             <div className="flex  flex-col items-center py-5 py-6 hover:red">
                 <Image alt="tick" src={DashboardIcon} className="w-full h-9 hover:red" />
-                <a href="/" className="text-primary pt-4 text-10 hover:red ">
+                <a href="/" className="text-primary pt-4 text-10 hover:red">
                  Dashboard
                 </a>
 
