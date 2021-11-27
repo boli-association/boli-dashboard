@@ -10,13 +10,15 @@ module.exports = {
             current: 'currentColor',
             red: colors.rose,
             "primary": "#8d97a2",
+            "secondary": "#6b7886",
             "app-primary": "#f8f8fa",
             "primary-hover" :"#7e8798",
             "btn-primary":"#555569",
             "btn-secondary": "#ecf5fa",
             white: colors.white,
             "gradient-blue-x": "#cae3ef",
-            "gradient-blue-y": "#9ac2db"
+            "gradient-blue-y": "#9ac2db",
+            
         },
         fontSize: {
             sm:['10px', '20px'],
