@@ -7,11 +7,13 @@ import WalletIcon from "../../public/assets/icons/wallet.svg";
 import ProposalsIcon from "../../public/assets/icons/proposals.svg";
 import StakingIcon from "../../public/assets/icons/staking.svg";
 import SwapIcon from "../../public/assets/icons/swap.svg";
+import BoliLogo from "../../public/assets/icons/boli_logo.svg";
 
 const Sidebar:FunctionComponent = () => {
     return (
         <div className=" px-5">
-            <div className="py-10">
+            <div className="py-10 flex justify-center">
+                <Image src={BoliLogo} alt="boli-logo"/>
             </div>
             <div className="flex  flex-col items-center py-5 py-6">
                 <Image alt="tick" src={DashboardIcon} className="w-full h-9" />

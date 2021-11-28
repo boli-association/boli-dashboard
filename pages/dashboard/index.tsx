@@ -5,12 +5,13 @@ import TextCards from "../../components/cards/text-cards/TextCards";
 import TopicHeadingCard from "../../components/cards/topic-heading-card/TopicHeadingCard";
 
 const Dashboard:FunctionComponent = () => {
-    
+
+    {/** All these varibales will be replaced by API data. Not to worry about it. */}
     const cardHeading = [{heading: 'Boli Price', value: '1 USDT'},
         {heading: 'Issuance', value: '10,000'},
         {heading: 'Total Supply', value: '10,000,000'},{heading: 'Staking Ratio', value: '25.00%'}];
 
-    const imageCardMdHeading = ['Nike', 'Adidas', 'Amazon', 'Ebay','Trade Me', 'Warehouse', 'Countdown'];
+    const imageCardMdHeading = ['Nike', 'Adidas', 'Amazon', 'Ebay','Trade Me'];
     const topicCardHeading = ['Sports', 'Music', 'Politics', 'Travel', 'Environment', 'Design', 'Mobility'];
 
     return (
