@@ -9,7 +9,7 @@ interface ImageCardsLg {
 
 const ImageCardsLg:FunctionComponent<ImageCardsLg> = ({value}) => {
     return (
-        <div className="h-96 w-96 ml-20 my-5 bg-gray-100 rounded-xl flex flex-col justify-between shadow duration-300 hover:bg-white hover:shadow-xl">
+        <div className="h-96 w-96 overflow-hidden bg-gray-100 rounded-xl flex flex-col justify-between shadow duration-300 hover:bg-white hover:shadow-xl">
             <Image src={TreesImage} alt="nike" /> {/** Temporary basis, don't worry about it */}
             <div className="pb-5 mt-2 text-sm flex flex-start font-semibold ">
                 <p className="ml-4"> {value}</p>

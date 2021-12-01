@@ -15,14 +15,14 @@ const Dashboard:FunctionComponent = () => {
     const topicCardHeading = ['Sports', 'Music', 'Politics', 'Travel', 'Environment', 'Design', 'Mobility'];
 
     return (
-        <div className="bg-app-primary flex-1 justify-between">
+        <div className="bg-app-primary py-3 flex-1 justify-between px-10">
             {/** Button */}
             <div className="flex mt-20">
-                <button className="ml-20 px-5 py-2 bg-btn-primary rounded-full text-white hover:bg-white hover:text-secondary" name="connect">CONNECT</button> 
+                <button className="px-5 py-2 bg-btn-primary rounded-full text-white hover:bg-white hover:text-secondary" name="connect">CONNECT</button> 
             </div>
 
             {/** Token Details */}
-            <div className="flex mt-10 justify-start flex-wrap">
+            <div className="flex mt-10 gap-x-8 gap-y-4 justify-start flex-wrap">
                 {cardHeading.map((item,index) => {
                     return (
                         <TextCards key={index} heading={item.heading} value={item.value}/>
@@ -32,8 +32,8 @@ const Dashboard:FunctionComponent = () => {
             </div>  
             
             {/** Trending Communities */}
-            <div className="font-16 ml-20 mt-10 text-heading-primary">Trending Communities</div>
-            <div className="flex mt-10 justify-start flex-wrap">
+            <div className="font-16 mt-10 text-heading-primary">Trending Communities</div>
+            <div className="flex mt-10 gap-x-8 gap-y-4 justify-start flex-wrap">
                 {imageCardMdHeading.map((item,index) => {
                     return (
                         <ImageCardsMd key={index} value={item} />
@@ -42,8 +42,8 @@ const Dashboard:FunctionComponent = () => {
             </div>  
 
             {/** Exploring Communities */}
-            <div className="font-16 ml-20 mt-10 text-heading-primary">Exploring Communities</div>
-            <div className="flex flex-wrap mt-10 justify-start w-92
+            <div className="font-16 mt-10 text-heading-primary">Exploring Communities</div>
+            <div className="flex flex-wrap gap-x-8 gap-y-6 mt-10 justify-start w-92
             ">
                 {imageCardMdHeading.map((item,index) => {
                     return (
@@ -53,8 +53,8 @@ const Dashboard:FunctionComponent = () => {
             </div>  
 
             {/** Top Communities  */}
-            <div className="font-16 ml-20 mt-10 text-heading-primary">Top Communities</div>
-            <div className="flex flex-wrap justify-start w-92 py-10
+            <div className="font-16 mt-10 text-heading-primary">Top Communities</div>
+            <div className="flex flex-wrap gap-x-8 gap-y-4 justify-start w-92 py-10
             ">
                 {topicCardHeading.map((item,index) => {
                     return (
