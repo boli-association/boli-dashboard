@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from "react";
-import ImageCardsLg from "../components/cards/image-cards-lg/ImageCardsLg";
-import ImageCardsMd from "../components/cards/image-cards-md/ImageCardsMd";
-import TextCards from "../components/cards/text-cards/TextCards";
-import TopicHeadingCard from "../components/cards/topic-heading-card/TopicHeadingCard";
-import Layout from "../components/layout/Layout";
+import ImageCardsLg from "@/components/cards/image-card-lg/ImageCardLg";
+import ImageCardsMd from "@/components/cards/image-card-md/ImageCardMd";
+import TextCards from "@/components/cards/text-card/TextCard";
+import TopicHeadingCard from "@/components/cards/topic-heading/TopicHeading";
+import Layout from "@/components/layout/Layout";
 
 const Home:FunctionComponent = () => {
 
