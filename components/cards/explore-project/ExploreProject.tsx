@@ -3,11 +3,11 @@ import { FunctionComponent } from "react";
 import Image from "next/image";
 import TreesImage from "../../../public/assets/temp/trees.jpg";
 
-interface ImageCardLg {
+interface ExploreProject {
     value: string
 }
 
-const ImageCardLg:FunctionComponent<ImageCardLg> = ({value}) => {
+const ExploreProject:FunctionComponent<ExploreProject> = ({value}) => {
     return (
         <div className="h-96 w-96 ml-20 my-5 bg-gray-100 rounded-xl flex flex-col justify-between shadow duration-300 hover:bg-white hover:shadow-xl">
             <Image src={TreesImage} alt="nike" /> {/** Temporary basis, don't worry about it */}
@@ -19,4 +19,4 @@ const ImageCardLg:FunctionComponent<ImageCardLg> = ({value}) => {
 
 };
 
-export default ImageCardLg;
+export default ExploreProject;
