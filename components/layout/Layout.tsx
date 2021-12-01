@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { FunctionComponent } from "react";
-import Sidebar from "../sidebar/Sidebar";
+import Sidebar from "@/components/sidebar/sidebar";
 
 
 interface Props {

@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from "react";
-import ImageCardsLg from "@/components/cards/image-card-lg/ImageCardLg";
-import ImageCardsMd from "@/components/cards/image-card-md/ImageCardMd";
-import TextCards from "@/components/cards/text-card/TextCard";
-import TopicHeadingCard from "@/components/cards/topic-heading/TopicHeading";
+import ImageCardLg from "@/components/cards/image-card-lg/ImageCardLg";
+import ImageCardMd from "@/components/cards/image-card-md/ImageCardMd";
+import TextCard from "@/components/cards/text-card/TextCard";
+import TopicHeading from "@/components/cards/topic-heading/TopicHeading";
 import Layout from "@/components/layout/Layout";
 
 const Home:FunctionComponent = () => {
@@ -27,7 +27,7 @@ const Home:FunctionComponent = () => {
                 <div className="flex mt-10 justify-start flex-wrap">
                     {cardHeading.map((item,index) => {
                         return (
-                            <TextCards key={index} heading={item.heading} value={item.value}/>
+                            <TextCard key={index} heading={item.heading} value={item.value}/>
                         );
                     })}
                
@@ -38,7 +38,7 @@ const Home:FunctionComponent = () => {
                 <div className="flex mt-10 justify-start flex-wrap">
                     {imageCardMdHeading.map((item,index) => {
                         return (
-                            <ImageCardsMd key={index} value={item} />
+                            <ImageCardMd key={index} value={item} />
                         );
                     })}
                 </div>  
@@ -49,7 +49,7 @@ const Home:FunctionComponent = () => {
             ">
                     {imageCardMdHeading.map((item,index) => {
                         return (
-                            <ImageCardsLg key={index} value={item} />
+                            <ImageCardLg key={index} value={item} />
                         );
                     })}
                 </div>  
@@ -60,7 +60,7 @@ const Home:FunctionComponent = () => {
             ">
                     {topicCardHeading.map((item,index) => {
                         return (
-                            <TopicHeadingCard key={index} value={item} />
+                            <TopicHeading key={index} value={item} />
                         );
                     })}
                 </div>  
