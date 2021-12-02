@@ -1,4 +1,4 @@
-import Chart from "./chart";
+import LineChart from "./LineChart";
 
 const chartData = [
   {
@@ -22,20 +22,18 @@ const chartData = [
 const ChartComponent = () => {
   return (
     <div
-      className="rounded-xl p-4 w-full text-white flex flex-col items-center"
-      style={{ backgroundColor: "#009c99" }}
+      className="rounded-xl p-4 w-full text-white flex flex-col items-center bg-custom-green-dark"
     >
       <h2 className="font-semibold">Universal Music Group</h2>
       <h5 className="font-semibold text-10 mb-4">UMGT</h5>
 
-      <Chart />
+      <LineChart />
 
       <div className="grid grid-cols-2 mt-6 w-full gap-4">
         {chartData.map((data, index) => (
           <div
             key={index}
-            className="rounded-xl px-4 py-2 text-xl"
-            style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+            className="rounded-xl px-4 py-2 text-xl bg-white bg-opacity-10"
           >
             <h4>{data.title}</h4>
             <p>{data.amount}</p>

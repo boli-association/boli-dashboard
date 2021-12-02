@@ -1,16 +1,17 @@
 // import { FunctionComponent } from "react";
 import * as d3 from "d3";
+import { FunctionComponent } from "react";
 import { useD3 } from "../../hooks/react-d3";
 
 const data = [
-  { year: 1980, efficiency: 24.3, sales: 8949000 },
-  { year: 1985, efficiency: 27.6, sales: 10979000 },
-  { year: 1990, efficiency: 28, sales: 9303000 },
-  { year: 1991, efficiency: 28.4, sales: 8185000 },
-  { year: 1992, efficiency: 27.9, sales: 8213000 },
+  { year: 1980, efficiency: 1, sales: 20 },
+  { year: 1985, efficiency: 2, sales: 24 },
+  { year: 1990, efficiency: 3, sales: 22 },
+  { year: 1991, efficiency: 4, sales: 30 },
+  { year: 1992, efficiency: 9, sales: 35 },
 ];
 
-const Chart = () => {
+const LineChart = ({ strokeColor = "white" }) => {
   const ref = useD3((svg) => {
     const height = 50;
     const width = 200;
@@ -31,7 +32,7 @@ const Chart = () => {
       .append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "white")
+      .attr("stroke", strokeColor)
       .attr("stroke-width", 1.5)
       .attr(
         "d",
@@ -51,6 +52,7 @@ const Chart = () => {
       ref={ref}
       style={{
         height: 50,
+        // backgroundColor: 'gray',
         width: "100%",
         marginRight: "0px",
         marginLeft: "0px",
@@ -59,4 +61,4 @@ const Chart = () => {
   );
 };
 
-export default Chart;
+export default LineChart;

@@ -1,4 +1,4 @@
-import TokenCard from "../cards/token-card/TokenCard";
+import TokenCard from "./TokenCard";
 
 const tokenData = [
   {
