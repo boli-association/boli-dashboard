@@ -25,7 +25,7 @@ const Sidebar:FunctionComponent = () => {
             <div className="flex flex-col items-center  py-5 py-6 ">
                 <Image alt="tick" src={WalletIcon} className="w-full h-9" />
                 <p className="text-primary pt-4 text-10 hover:text-gradient-blue-y">
-                    <a href="/"> Wallet</a>
+                    <a href="/wallet"> Wallet</a>
                 </p>
 
             </div>
