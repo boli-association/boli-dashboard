@@ -1,19 +1,19 @@
 import React, { FunctionComponent } from "react";
-import ImageCardsLg from "../components/cards/image-cards-lg/ImageCardsLg";
-import ImageCardsMd from "../components/cards/image-cards-md/ImageCardsMd";
-import TextCards from "../components/cards/text-cards/TextCards";
-import TopicHeadingCard from "../components/cards/topic-heading-card/TopicHeadingCard";
-import Layout from "../components/layout/Layout";
+import Layout from "@/components/layout/Layout";
+import ProductDetail from "@/components/cards/product-detail/ProductDetail";
+import TrendingCommunity from "@/components/cards/trending-community/TrendingCommunity";
+import ExploreProject from "@/components/cards/explore-project/ExploreProject";
+import TopCategory from "@/components/cards/top-category/TopCategory";
 
 const Home:FunctionComponent = () => {
 
     {/** All these varibales will be replaced by API data. Not to worry about it. */}
-    const cardHeading = [{heading: 'Boli Price', value: '1 USDT'},
+    const productDetails = [{heading: 'Boli Price', value: '1 USDT'},
         {heading: 'Issuance', value: '10,000'},
         {heading: 'Total Supply', value: '10,000,000'},{heading: 'Staking Ratio', value: '25.00%'}];
 
-    const imageCardMdHeading = ['Nike', 'Adidas', 'Amazon', 'Ebay','Trade Me'];
-    const topicCardHeading = ['Sports', 'Music', 'Politics', 'Travel', 'Environment', 'Design', 'Mobility'];
+    const merchantHeadings = ['Nike', 'Adidas', 'Amazon', 'Ebay','Trade Me'];
+    const topCategories = ['Sports', 'Music', 'Politics', 'Travel', 'Environment', 'Design', 'Mobility'];
 
     return (
         <Layout>
@@ -25,9 +25,9 @@ const Home:FunctionComponent = () => {
 
                 {/** Token Details */}
                 <div className="flex mt-10 justify-start flex-wrap">
-                    {cardHeading.map((item,index) => {
+                    {productDetails.map((item,index) => {
                         return (
-                            <TextCards key={index} heading={item.heading} value={item.value}/>
+                            <ProductDetail key={index} heading={item.heading} value={item.value}/>
                         );
                     })}
                
@@ -36,9 +36,9 @@ const Home:FunctionComponent = () => {
                 {/** Trending Communities */}
                 <div className="font-16 ml-20 mt-10 text-heading-primary">Trending Communities</div>
                 <div className="flex mt-10 justify-start flex-wrap">
-                    {imageCardMdHeading.map((item,index) => {
+                    {merchantHeadings.map((item,index) => {
                         return (
-                            <ImageCardsMd key={index} value={item} />
+                            <TrendingCommunity key={index} value={item} />
                         );
                     })}
                 </div>  
@@ -47,9 +47,9 @@ const Home:FunctionComponent = () => {
                 <div className="font-16 ml-20 mt-10 text-heading-primary">Exploring Communities</div>
                 <div className="flex flex-wrap mt-10 justify-start w-92
             ">
-                    {imageCardMdHeading.map((item,index) => {
+                    {merchantHeadings.map((item,index) => {
                         return (
-                            <ImageCardsLg key={index} value={item} />
+                            <ExploreProject key={index} value={item} />
                         );
                     })}
                 </div>  
@@ -58,9 +58,9 @@ const Home:FunctionComponent = () => {
                 <div className="font-16 ml-20 mt-10 text-heading-primary">Top Communities</div>
                 <div className="flex flex-wrap justify-start w-92 py-10
             ">
-                    {topicCardHeading.map((item,index) => {
+                    {topCategories.map((item,index) => {
                         return (
-                            <TopicHeadingCard key={index} value={item} />
+                            <TopCategory key={index} value={item} />
                         );
                     })}
                 </div>  
