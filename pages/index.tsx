@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
-import RightSidebar from "../components/sidebar/right-sidebar";
+import ChartComponent from "../components/chart/ChartComponent";
 import Sidebar from "../components/sidebar/sidebar";
+import TokenComponent from "../components/token/TokenComponent";
 import Dashboard from "./dashboard";
 
 const Home: FunctionComponent = () => {
@@ -12,7 +13,16 @@ const Home: FunctionComponent = () => {
         <Dashboard />
       </div>
       <div className="w-3/12">
-        <RightSidebar />
+        <div className="flex flex-col items-center w-full px-5 py-7">
+          {/* <input
+        type="text"
+        placeholder="launch a community"
+        className="uppercase bg-app-primary rounded-full px-7 py-3"
+      /> */}
+
+          <ChartComponent />
+          <TokenComponent />
+        </div>
       </div>
     </div>
   );

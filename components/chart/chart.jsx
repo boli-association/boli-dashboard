@@ -31,7 +31,7 @@ const Chart = () => {
       .append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "steelblue")
+      .attr("stroke", "white")
       .attr("stroke-width", 1.5)
       .attr(
         "d",
