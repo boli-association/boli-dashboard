@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^12.0.4",
+    "d3": "^7.1.1",
     "eslint-plugin-react": "^7.27.1",
     "next": "12.0.4",
     "react": "^17.0.2",

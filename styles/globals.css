@@ -1,12 +1,33 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500&display=swap");
 
 @layer sora {
-    @font-face {
-      font-family: Sora;
-      font-weight: 400;
-      src: url(/fonts/Sora/Sora-Regular.ttf) format("woff");
-    }
+  @font-face {
+    font-family: Sora;
+    font-weight: 400;
+    src: url(/fonts/Sora/Sora-Regular.ttf) format("truetype");
   }
+}
+
+* {
+  @apply duration-150;
+}
+
+input,
+select,
+button,
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+
+input{
+  @apply px-5 py-2 w-full border border-border-primary rounded-full;
+}
