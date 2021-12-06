@@ -6,9 +6,9 @@ import DashboardIcon from "../../public/assets/icons/dashboard.svg";
 import HistoryIcon from "../../public/assets/icons/history.svg";
 import WalletIcon from "../../public/assets/icons/wallet.svg";
 import ProposalsIcon from "../../public/assets/icons/proposals.svg";
-import StakingIcon from "../../public/assets/icons/staking.svg";
 import SwapIcon from "../../public/assets/icons/swap.svg";
 import BoliLogo from "../../public/assets/icons/boli_logo.svg";
+import CommunityIcon from "../../public/assets/icons/communities.svg";
 import { useRouter } from "next/dist/client/router";
 
 const sidebarItems = [
@@ -30,12 +30,8 @@ const sidebarItems = [
     icon: ProposalsIcon,
   },
   {
-    title: "Staking",
-    icon: StakingIcon,
-  },
-  {
-    title: "History",
-    icon: HistoryIcon,
+    title: "Community",
+    icon: CommunityIcon,
   },
 ];
 

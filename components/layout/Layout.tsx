@@ -15,12 +15,6 @@ const Layout: FunctionComponent<Props> = ({ children }) => {
 
       <div className="w-3/12">
         <div className="flex flex-col items-center w-full px-5 py-7">
-          {/* <input
-        type="text"
-        placeholder="launch a community"
-        className="uppercase bg-app-primary rounded-full px-7 py-3"
-      /> */}
-
           <ChartComponent />
           <TokenComponent />
         </div>

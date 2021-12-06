@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useRef } from "react";
 import Layout from "@/components/layout/Layout";
 import LineChart from "@/components/chart/LineChart";
+import Select from "@/components/select/select";
 
 const tokenOptions = ["BOLIT", "USDT", "BTC"];
 
@@ -20,7 +21,7 @@ const Swap: FunctionComponent = () => {
         </Card>
         <Card>
           <h4>Boli Exchange Rate</h4>
-          <CustomSelect options={tokenOptions} />
+          <Select options={tokenOptions} />
 
           <div className="flex items-center gap-x-3 mt-3 justify-between">
             <div className="w-1/2">
@@ -41,13 +42,13 @@ const Swap: FunctionComponent = () => {
         <Card>
           <div className="flex w-full items-center justify-between gap-x-4">
             <div className="w-1/2">
-              <CustomSelect options={tokenOptions} />
+              <Select options={tokenOptions} />
               <input className="mt-4" type="text" />
             </div>
 
             <div className="order-3 w-1/2">
-              <CustomSelect options={tokenOptions} />
-              <input className="mt-4" type="text" />
+              <Select options={tokenOptions} />
+              <input className="mt-4 p-2" type="text" />
             </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -76,23 +77,4 @@ const Card = ({ children }) => (
   <div className="bg-white px-7 py-5 rounded-xl">{children}</div>
 );
 
-const CustomSelect = ({ options }) => {
-  const selectRef = useRef<HTMLSelectElement>(null);
-  return (
-    <div
-      onClick={() => selectRef.current.focus()}
-      className="rounded-full border border-border-primary relative px-4 mt-2 flex items-center justify-between"
-    >
-      <div className="transform pointer-events-none rotate-180 order-2 text-primary">
-        ▲
-      </div>
-      <select ref={selectRef} name="" id="" className="py-2 w-full ">
-        {options.map((option) => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-    </div>
-  );
-};
+
