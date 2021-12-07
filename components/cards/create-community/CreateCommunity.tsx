@@ -6,7 +6,7 @@ import React, { FunctionComponent } from "react";
 const CreateCommunity: FunctionComponent = () => {
   const tokenOptions = ["BOLIT", "USDT", "BTC"];
   return (
-    <div className="p-2 overflow-hidden  bg-gray-100 rounded-xl  shadow duration-300 hover:bg-white hover:shadow-xl">
+    <div className="p-2 overflow-hidden  bg-gray-100 rounded-xl  shadow duration-300">
       <div className="m-4 w-auto">
       <label className="block text-gray-700 text-base font-bold mb-2">
         Community Name
