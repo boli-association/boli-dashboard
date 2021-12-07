@@ -8,7 +8,7 @@ import WalletIcon from "../../public/assets/icons/wallet.svg";
 import ProposalsIcon from "../../public/assets/icons/proposals.svg";
 import SwapIcon from "../../public/assets/icons/swap.svg";
 import BoliLogo from "../../public/assets/icons/boli_logo.svg";
-import CommunityIcon from "../../public/assets/icons/communities.svg";
+import CommunityIcon from "../../public/assets/icons/community.svg";
 import { useRouter } from "next/dist/client/router";
 
 const sidebarItems = [

@@ -6,6 +6,11 @@ import React, { FunctionComponent } from "react";
 const Community: FunctionComponent = () => {
   const community = ['Nike', 'Eco Org', 'R'];
   const router = useRouter();
+
+  const onCardClick  = ():void => {
+    router.push('/community/1');
+  }
+
   return (
     <Layout>
       <div className="flex-1 justify-between">
@@ -15,7 +20,7 @@ const Community: FunctionComponent = () => {
         </div>
         <div className="flex gap-x-8 gap-y-6 flex-wrap justify-start w-92 py-5"> 
         {community.map((item, key) => ( 
-            <TrendingCommunity key={key} value={item} />
+            <TrendingCommunity key={key} value={item}  onClick={onCardClick} />
         ))}
         </div>
 
