@@ -2,36 +2,25 @@
 import { FunctionComponent } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DashboardIcon from "../../public/assets/icons/dashboard.svg";
-import HistoryIcon from "../../public/assets/icons/history.svg";
-import WalletIcon from "../../public/assets/icons/wallet.svg";
-import ProposalsIcon from "../../public/assets/icons/proposals.svg";
-import SwapIcon from "../../public/assets/icons/swap.svg";
 import BoliLogo from "../../public/assets/icons/boli_logo.svg";
-import CommunityIcon from "../../public/assets/icons/communities.svg";
 import { useRouter } from "next/dist/client/router";
 
 const sidebarItems = [
   {
     title: "Dashboard",
-    icon: DashboardIcon,
     link: "",
   },
   {
     title: "Wallet",
-    icon: WalletIcon,
   },
   {
     title: "Swap",
-    icon: SwapIcon,
   },
   {
     title: "Proposals",
-    icon: ProposalsIcon,
   },
   {
     title: "Community",
-    icon: CommunityIcon,
   },
 ];
 
