@@ -2,13 +2,11 @@
 import Select from "@/components/select/select";
 import React, { FunctionComponent } from "react";
 
-interface Props {
-    children: React.ReactNode;
-}
-const CreateToken: FunctionComponent<Props> = ({ children }) => {
+
+const CreateToken: FunctionComponent = () => {
     const tokenOptions = ["BOLIT", "USDT", "BTC"];
     return (
-        <div className="h-44  p-2 overflow-hidden  bg-gray-100 rounded-xl flex flex-col  shadow duration-300 hover:bg-white hover:shadow-xl">
+        <div className="h-44  p-2 overflow-hidden  bg-gray-100 rounded-xl flex flex-col  shadow duration-300">
             <div className="flex  items-center justify-between gap-x-4">
                 <div className="">
                     <label className="block text-gray-700 text-base font-bold m-2">
