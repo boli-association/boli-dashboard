@@ -4,6 +4,7 @@ import ProductDetail from "@/components/cards/product-detail/ProductDetail";
 import TrendingCommunity from "@/components/cards/trending-community/TrendingCommunity";
 import ExploreProject from "@/components/cards/explore-project/ExploreProject";
 import TopCategory from "@/components/cards/top-category/TopCategory";
+import { useRouter } from "next/dist/client/router";
 
 const Home: FunctionComponent = () => {
   {
@@ -26,6 +27,11 @@ const Home: FunctionComponent = () => {
     "Design",
     "Mobility",
   ];
+
+  const router = useRouter();
+  const onCardClick = (): void => {
+    router.push('/community/1');
+  };
 
   return (
     <Layout>
@@ -50,7 +56,7 @@ const Home: FunctionComponent = () => {
                 value={item.value}
               />
             );
-          })} 
+          })}
         </div>
 
         {/** Trending Communities */}
@@ -59,7 +65,7 @@ const Home: FunctionComponent = () => {
         </div>
         <div className="flex mt-10 gap-x-8 gap-y-4 justify-start flex-wrap">
           {merchantHeadings.map((item, index) => {
-            return <TrendingCommunity key={index} value={item} />;
+            return <TrendingCommunity onClick={onCardClick} key={index} value={item} />;
           })}
         </div>
 
