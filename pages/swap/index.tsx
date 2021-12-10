@@ -3,7 +3,7 @@ import Layout from "@/components/layout/Layout";
 import LineChart from "@/components/chart/LineChart";
 import Select from "@/components/select/select";
 
-const tokenOptions = ["BOLIT", "USDT", "BTC"];
+const tokenOptions = ["BOEUR", "BOLIT", "USDT", "BTC"];
 
 const Swap: FunctionComponent = () => {
   return (
@@ -11,7 +11,7 @@ const Swap: FunctionComponent = () => {
       <h3 className="proposal-heading mt-12">Boli Exchange</h3>
       <div className="grid grid-cols-2 gap-x-4 gray-text">
         <Card>
-          <h4 className="mt-2">Boli Credit Price</h4>
+          <h4 className="mt-2">Boli Token Price</h4>
           <div className="flex gap-x-4 mt-6 mb-4 justify-between">
             <h5>0.01847 UST</h5>
             <h5 className="text-custom-green-light text-right">
@@ -38,7 +38,7 @@ const Swap: FunctionComponent = () => {
         </Card>
       </div>
 
-      <h2 className="mt-10 mb-5">Swap Coins</h2>
+      <h3 className="proposal-heading mt-12">Swap Coins</h3>
       <div className="gray-text">
         <Card>
           <div className="flex w-full items-center justify-between gap-x-4">
@@ -48,7 +48,7 @@ const Swap: FunctionComponent = () => {
             </div>
 
             <div className="order-3 w-1/2">
-              <Select options={["NBOLI"]} />
+              <Select options={["NBOLI", "BBOLI", "ECOBOLI"]} />
               <input className="mt-4 p-2" type="text" />
             </div>
             <svg

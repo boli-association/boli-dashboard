@@ -1,11 +1,6 @@
 
 import React, { FunctionComponent } from "react";
 import Layout from "@/components/layout/Layout";
-import ManageToken from "@/components/cards/manage-token/ManageToken";
-import ExploreProject from "@/components/cards/explore-project/ExploreProject";
-import TrendingCommunity from "@/components/cards/trending-community/TrendingCommunity";
-import CreateCommunity from "@/components/cards/create-community/CreateCommunity";
-import CreateToken from "@/components/cards/create-token/CreateToken";
 import CommuityDetails from "@/components/cards/community-details/CommunityDetails";
 
 const Community: FunctionComponent = () => {
@@ -15,7 +10,7 @@ const Community: FunctionComponent = () => {
             <div className="flex-1 min-w-full">
                 {/** Community Heading */}
                 <div>
-                    <p className="font-16 flex text-heading-primary">Noonu Atoll</p>
+                    <h3 className="proposal-heading mt-12">Noonu Atoll</h3>
                 </div>
 
                 {/** Community Details */}

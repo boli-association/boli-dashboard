@@ -6,23 +6,17 @@ const Wallet: FunctionComponent = () => {
   return (
     <Layout>
       <div className="flex-1 justify-between">
-        {/** My token */}
-        <div>
-          <p className="font-16 flex text-heading-primary">My Tokens </p>
-        </div>
-        <ManageToken value={"Boli Token"} />
 
         {/** Boli Native Tokens */}
-        <div>
-          <p className="font-16 flex mt-10 text-heading-primary">
-            Boli Native{" "}
-          </p>
-        </div>
+        <h3 className="proposal-heading mt-12">Boli Money</h3>
         <ManageToken value={"Boli Token"} />
+        <ManageToken value={"Rufiyaa Boli"} />
+        <ManageToken value={"Euro Boli"} />
+        <ManageToken value={"Dollar Boli"} />
 
         {/** Community Tokens */}
-        <div className="flex items-center mt-10 mb-6 mr-20 justify-between">
-          <p className="font-16 flex text-heading-primary">Community Tokens</p>
+        <div className="flex items-center mt-10 mb-6 mr-0 justify-between">
+          <h3 className="proposal-heading mt-12">Community Tokens</h3>
           <div className="flex gap-x-3 items-center">
             <button className="bg-transparent text-btn-text-blue">
               Add Tokens
@@ -44,7 +38,8 @@ const Wallet: FunctionComponent = () => {
           </div>
         </div>
 
-        <ManageToken value={"Boli Token"} />
+        <ManageToken value={"Noonu Boli"} />
+        <ManageToken value={"Banyan Tree Boli"} />
       </div>
     </Layout>
   );
