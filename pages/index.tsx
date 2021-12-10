@@ -1,10 +1,11 @@
-import React, { FunctionComponent } from "react";
-import Layout from "@/components/layout/Layout";
-import ProductDetail from "@/components/cards/product-detail/ProductDetail";
-import TrendingCommunity from "@/components/cards/trending-community/TrendingCommunity";
 import ExploreProject from "@/components/cards/explore-project/ExploreProject";
+import ProductDetail from "@/components/cards/product-detail/ProductDetail";
 import TopCategory from "@/components/cards/top-category/TopCategory";
+import TrendingCommunity from "@/components/cards/trending-community/TrendingCommunity";
+import Layout from "@/components/layout/Layout";
 import { useRouter } from "next/dist/client/router";
+import React, { FunctionComponent, useState } from "react";
+
 
 const Home: FunctionComponent = () => {
   {
@@ -32,19 +33,44 @@ const Home: FunctionComponent = () => {
   const onCardClick = (): void => {
     router.push('/community/1');
   };
+  const [currentAccount, setCurrentAccount] = useState('');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const connectWallet = async () => {
+    const currentWindow: any = window;
+    if (!currentWindow.keplr) {
+      alert("Please install keplr extension");
+    } else {
+      const chainId = "cosmoshub-4";
+      try {
+        await currentWindow.keplr.enable(chainId);
+      }
+      catch (e) {
+        alert('Please log into Keplr account');
+      }
+      const offlineSigner = currentWindow.getOfflineSigner(chainId);
+      const accounts = await offlineSigner.getAccounts();
+      console.log(accounts);
+      setCurrentAccount(accounts[0].address);
+      setIsAuthenticated(true);
+      alert('You have connected to your wallet to Boli network!') // Right now we will focus on the first accoumt;
+    }
+  };
 
   return (
     <Layout>
       <div className="flex-1 justify-between">
-        {/** Button */}
-        <div className="flex">
-          <button
-            className="px-5 py-2 bg-btn-primary rounded-full text-white hover:bg-white hover:text-secondary"
-            name="connect"
-          >
-            CONNECT
-          </button>
-        </div>
+
+        {/** Button/ Address */}
+        {!isAuthenticated ? (<button
+          className="px-5 py-2 bg-btn-primary rounded-full text-white hover:bg-white hover:text-secondary"
+          name="connect"
+          onClick={connectWallet}
+        >
+          CONNECT
+        </button>) : (<div className="p-1 bg-white rounded-3xl">
+          <p className="px-5 text-primary text-base">{currentAccount}</p>
+        </div>)}
 
         {/** Token Details */}
         <div className="flex mt-10 gap-x-8 gap-y-4 justify-start flex-wrap">

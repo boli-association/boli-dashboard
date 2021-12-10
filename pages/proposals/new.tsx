@@ -17,8 +17,6 @@ export default () => {
   const fileSelectRef = useRef(null);
 
   const onSubmit = async (data) => {
-    console.log(images);
-    console.log(data);
   };
 
   const onFileSelect = (e) => {
