@@ -155,3 +155,21 @@ body {
   font-weight: 300;
   color: #9FA5B3;
 }
+
+.wallet-btn {
+  font-size: 14px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.detail-heading-small {
+  color: #595961;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.detail-p {
+  font-size: 12px;
+}
