@@ -41,41 +41,45 @@ export default () => {
 
   return (
     <Layout>
-      <h3>New proposal</h3>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="px-5 py-3 rounded-xl mt-4 bg-white">
-          <FormInput
-            label="Title"
-            id="title"
-            register={register}
-            errors={errors}
-          />
-          <FormTextArea label="Proposal" id="proposal" />
+      <h3 className="proposal-heading">New Proposal</h3>
+      <form className="form-text-color" onSubmit={handleSubmit(onSubmit)}>
+        <div className="px-5 py-3 rounded-xl mt-4 pt-12 bg-white">
+          <div>
+            <FormInput
+              label="Title"
+              id="title"
+              register={register}
+              errors={errors}
+            />
+          </div>
+          <div className="mt-6">
+            <FormTextArea label="Proposal" id="proposal" />
+          </div>
           <div className="grid grid-cols-2 gap-x-8">
-            <div>
+            <div className="mt-6">
               <label htmlFor="community">Community</label>
-              <Select options={["Noonu Atoll", "Boli", "Nike"]} />
+              <Select options={["Noonu Atoll", "Banyan Tree", "The Eco Org"]} />
             </div>
 
-            <div>
+            <div className="mt-6">
               <label htmlFor="type">Type</label>
-              <Select options={["Noonu Atoll", "Project", "Nike"]} />
+              <Select options={["Project", "Idea", "Nike"]} />
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-x-8 mt-4">
-            <div>
+            <div className="mt-6">
               <label htmlFor="minumum">Minumum Deposit</label>
               <input type="text" id="minumum" name="minumum" />
             </div>
 
-            <div>
+            <div className="mt-6">
               <label htmlFor="date">Date time</label>
               <input type="datetime-local" id="date" name="date" />
             </div>
           </div>
 
-          <div className="mt-2">
+          <div className="mt-8 pb-12">
             <label className="mb-2" htmlFor="images">
               Images
             </label>

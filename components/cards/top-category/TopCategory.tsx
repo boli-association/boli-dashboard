@@ -9,8 +9,8 @@ interface TopCategory {
 
 const TopCategory:FunctionComponent<TopCategory> = ({value}) => {
     return (
-        <div className="h-12 w-36 bg-white rounded-xl flex  justify-center shadow duration-300 hover:bg-gradient-blue-y hover:text-white">
-            <p className="font-14 uppercase mt-3 text-secondary"> {value}</p> 
+        <div className="h-12 w-36 bg-white rounded-xl flex  justify-center shad duration-300">
+            <p className="font-12 uppercase mt-3 text-secondary"> {value}</p> 
         </div>
     );
 
