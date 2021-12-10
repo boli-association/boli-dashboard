@@ -32,7 +32,7 @@ const Sidebar: FunctionComponent = () => {
   const router = useRouter();
 
   return (
-    <div className="px-5">
+    <div className="px-5 navbar">
       <div className="py-10 flex justify-center">
         <Image src={BoliLogo} alt="boli-logo" />
       </div>

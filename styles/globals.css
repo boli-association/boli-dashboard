@@ -44,3 +44,114 @@ textarea {
 .button-style {
   @apply rounded-full px-5 py-2 bg-btn-dark-blue text-white;
 }
+
+.shad {
+  -webkit-box-shadow: 0px 2px 12px 0px #E6E8EC; 
+  box-shadow: 0px 2px 12px 0px #E6E8EC;
+}
+
+body {
+  background: #E6E8EC;
+}
+
+.innercontainer {
+  margin-top: 90px;
+}
+
+.navbar {
+  background: white;
+}
+
+.toolbar {
+  background: white;
+}
+
+.contain {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tokentext {
+  font-size: 12px;
+}
+
+.proposal-title {
+  font-size: 16px;
+  color: #595961;
+}
+
+.proposal-creator {
+  font-size: 14px;
+  color: #9FA5B3;
+}
+
+.proposal-value, .proposal-minimum {
+  font-size: 12px;
+  color: #84848F;
+}
+
+.tokentext {
+  color: #595961;
+}
+
+.tokenprice {
+  color: #9FA5B3;
+}
+
+.h3-heading {
+  font-size: 14px;
+  color: #595961;
+}
+
+.blue-btn {
+  font-size: 14px;
+}
+
+.connect-btn {
+  font-size: 14px;
+}
+
+.product-btn {
+  color: #9AC2DB;
+}
+
+.product-values {
+  color: #595961;
+}
+
+.proposal-heading {
+  font-size: 24px;
+  margin-bottom: 42px;
+  color: #595961;
+}
+
+.end-bubble {
+  opacity: .8;
+}
+
+.proposal-button-text {
+  font-size: 14px;
+}
+
+.form-text-color {
+  color: #595961;
+}
+
+.gray-text {
+  color: #595961;
+}
+
+.rounded-image {
+  border-radius: 10px;
+}
+
+.community-p {
+  margin-top: 12px;
+  color: #595961;
+}
+
+.communityTokenCode {
+  font-size: 10px;
+  font-weight: 300;
+  color: #9FA5B3;
+}

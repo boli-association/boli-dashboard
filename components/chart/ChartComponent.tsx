@@ -24,8 +24,8 @@ const ChartComponent = () => {
     <div
       className="rounded-xl p-4 w-full text-white flex flex-col items-center bg-custom-green-dark"
     >
-      <h2 className="font-semibold">Universal Music Group</h2>
-      <h5 className="font-semibold text-10 mb-4">UMGT</h5>
+      <h2 className="font-semibold">Noonu Atoll</h2>
+      <h5 className="font-semibold text-10 mb-4">NBOLI</h5>
 
       <LineChart />
 

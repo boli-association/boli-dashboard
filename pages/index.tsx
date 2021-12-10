@@ -3,6 +3,7 @@ import ProductDetail from "@/components/cards/product-detail/ProductDetail";
 import TopCategory from "@/components/cards/top-category/TopCategory";
 import TrendingCommunity from "@/components/cards/trending-community/TrendingCommunity";
 import Layout from "@/components/layout/Layout";
+import ProposalCard from "@/components/cards/proposal/ProposalCard";
 import { useRouter } from "next/dist/client/router";
 import React, { FunctionComponent, useState } from "react";
 
@@ -18,7 +19,15 @@ const Home: FunctionComponent = () => {
     { heading: "Staking Ratio", value: "25.00%" },
   ];
 
-  const merchantHeadings = ["Nike", "Adidas", "Amazon", "Ebay", "Trade Me"];
+  const communityList = [
+    { name: "Noonu Atoll", profileImg: "/assets/temp/1.png", tokenCode: "NBOLI" },
+    { name: "The Eco Org", profileImg: "/assets/temp/2.png", tokenCode: "ECOBOLI" },
+    { name: "Banyan Tree", profileImg: "/assets/temp/3.png", tokenCode: "BANYANBOLI" },
+    { name: "DJRukey", profileImg: "/assets/temp/4.png", tokenCode: "DJKBOLI" }
+  ]
+
+  const merchantHeadings = ["Noonu Atoll", "Adidas", "Amazon", "Ebay"];
+  const projectHeadings = ["Greening Noonu Atoll", "Adidas", "Amazon", "Ebay"];
   const topCategories = [
     "Sports",
     "Music",
@@ -26,7 +35,6 @@ const Home: FunctionComponent = () => {
     "Travel",
     "Environment",
     "Design",
-    "Mobility",
   ];
 
   const router = useRouter();
@@ -63,7 +71,7 @@ const Home: FunctionComponent = () => {
 
         {/** Button/ Address */}
         {!isAuthenticated ? (<button
-          className="px-5 py-2 bg-btn-primary rounded-full text-white hover:bg-white hover:text-secondary"
+          className="px-5 py-2 connect-btn bg-btn-primary rounded-full text-white hover:bg-white hover:text-secondary"
           name="connect"
           onClick={connectWallet}
         >
@@ -86,30 +94,64 @@ const Home: FunctionComponent = () => {
         </div>
 
         {/** Trending Communities */}
-        <div className="font-16 mt-10 text-heading-primary">
+        <div className="font-16 mt-12 text-heading-primary">
           Trending Communities
         </div>
-        <div className="flex mt-10 gap-x-8 gap-y-4 justify-start flex-wrap">
-          {merchantHeadings.map((item, index) => {
-            return <TrendingCommunity onClick={onCardClick} key={index} value={item} />;
+        <div className="flex mt-4 gap-x-8 gap-y-4 justify-start flex-wrap">
+          {communityList.map((item, index) => {
+            return <TrendingCommunity onClick={onCardClick} key={index} communityName={item.name} communityLogo={item.profileImg} communityToken={item.tokenCode} />;
           })}
         </div>
 
         {/** Exploring Communities */}
-        <div className="font-16 mt-10 text-heading-primary">
-          Exploring Communities
+        <div className="font-16 mt-12 text-heading-primary">
+          Exploring Projects
         </div>
-        <div
-          className="flex gap-x-8 gap-y-6 flex-wrap mt-10 justify-start w-92
-            "
-        >
-          {merchantHeadings.map((item, index) => {
-            return <ExploreProject key={index} value={item} />;
-          })}
+        <div className="grid grid-cols-2 gap-x-6 gap-y-4 mt-10">
+        <ProposalCard
+            thumb="/assets/temp/palmtrees.jpg"
+            title="Greening Noonu Atoll"
+            creator="Noonu Atoll"
+            value={1020.0}
+            minimum={10.0}
+            coin="NBOLI"
+            enddate="12/23/2021"
+            endtime="9.00PM"
+          />
+          <ProposalCard
+            thumb="/assets/temp/reef.jpg"
+            title="Conserving Noonu Reefs"
+            creator="Noonu Atoll"
+            value={320.0}
+            minimum={5.0}
+            coin="NBOLI"
+            enddate="12/28/2021"
+            endtime="11.00PM"
+          />
+          <ProposalCard
+            thumb="/assets/temp/3dart.jpg"
+            title="3D Slices"
+            creator="Yarts"
+            value={980.0}
+            minimum={15.0}
+            coin="YBOLI"
+            enddate="01/10/2022"
+            endtime="7.00PM"
+          />
+          <ProposalCard
+            thumb="/assets/temp/dj.jpg"
+            title="IslandDM"
+            creator="DJRukey"
+            value={200.0}
+            minimum={10.0}
+            coin="RKBOLI"
+            enddate="01/12/2022"
+            endtime="1.00PM"
+          />
         </div>
 
         {/** Top Communities  */}
-        <div className="font-16 mt-10 text-heading-primary">
+        <div className="font-16 mt-12 text-heading-primary">
           Top Communities
         </div>
         <div
